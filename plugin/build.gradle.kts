@@ -54,15 +54,15 @@ publishing {
         mavenLocal()
         maven {
             //url = uri("http://sacredcraft.cn:8081/repository/releases")
-            url = uri("https://repo1.maven.org/maven2")
-            isAllowInsecureProtocol = true
-            credentials {
-                username = project.findProperty("taboolibUsername").toString()
-                password = project.findProperty("taboolibPassword").toString()
-            }
-            authentication {
-               create<BasicAuthentication>("basic")
-            }
+            url = uri("https://repo.spongepowered.org/maven")
+            //isAllowInsecureProtocol = true
+           // credentials {
+            //    username = project.findProperty("taboolibUsername").toString()
+            //    password = project.findProperty("taboolibPassword").toString()
+          //  }
+           // authentication {
+          //     create<BasicAuthentication>("basic")
+           // }
         }
        // maven {
          //   url = uri("https://repo1.maven.org/maven2")
