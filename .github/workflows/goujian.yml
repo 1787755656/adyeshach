@@ -58,15 +58,15 @@ jobs:
         #  name: Plugin
          # path: build/libs/*.jar
         
-      - name: Upload to release
+    #  - name: Upload to release
         #if: github.event_name == 'release'
-        uses: softprops/action-gh-release@v1
-        with:
-         files: ./plugin/build/libs/*.jar
+        #uses: softprops/action-gh-release@v1
+    #    with:
+       #  files: ./plugin/build/libs/*.jar
         # output jar
-   #   - name: Upload Artifacts
-    #    uses: actions/upload-pages-artifact@v2
-      #  with:
-       #   name: adyeshach Release
-          #path: build/libs/*.jar
-         # path: "**/build/libs/*.jar"
+      - name: Upload Artifacts
+        uses: actions/upload-pages-artifact@v2
+        with:
+          name: adyeshach Release
+          path: build/libs/*.jar
+          #path: "./plugin/build/libs/*.jar"
