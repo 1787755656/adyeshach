@@ -63,6 +63,10 @@ publishing {
                 create<BasicAuthentication>("basic")
             }
         }
+        maven {
+            url = uri("https://repo1.maven.org/maven2/")
+            }
+        }
     }
     publications {
         // API 发布配置
