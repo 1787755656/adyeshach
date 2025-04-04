@@ -68,5 +68,5 @@ jobs:
         uses: actions/upload-pages-artifact@v2
         with:
           name: adyeshach Release
-          path: build/libs/*.jar
+          path: ./plugin/build/libs/*.jar
           #path: "./plugin/build/libs/*.jar"
