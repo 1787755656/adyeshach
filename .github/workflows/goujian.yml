@@ -50,9 +50,7 @@ jobs:
       - name: Verify Build Outputs
         run: |
           echo "根项目构建产物："
-          ls -l build/libs
-          echo "子模块构建产物："
-          find . -path "*/build/libs/*.jar" -exec ls -l {} \;
+          find . -name "*.jar"
 
       #- name: Upload artifact
       #  uses: actions/upload-artifact@v2
