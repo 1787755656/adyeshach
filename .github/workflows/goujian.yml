@@ -50,7 +50,7 @@ jobs:
 
         # output jar
       - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           name: adyeshach Release
           path: build/libs/*.jar
