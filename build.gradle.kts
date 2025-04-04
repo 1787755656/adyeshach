@@ -23,7 +23,7 @@ subprojects {
         version { taboolib = "6.2.2" }
     }
     repositories {
-        mavenLocal(
+        mavenLocal()
         maven { url = uri("https://repo.spongepowered.org/maven") }
         mavenCentral()
     }
