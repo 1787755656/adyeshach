@@ -47,6 +47,12 @@ jobs:
         id: build_4
         if: steps.build_3.outcome == 'failure'
         run: ./gradlew clean build
+      - name: Verify Build Outputs
+        run: |
+          echo "根项目构建产物："
+          ls -l build/libs
+          echo "子模块构建产物："
+          find . -path "*/build/libs/*.jar" -exec ls -l {} \;
 
         # output jar
       - name: Upload Artifacts
