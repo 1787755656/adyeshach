@@ -53,7 +53,7 @@ publishing {
     repositories {
         mavenLocal()
         maven {
-           // url = uri("http://sacredcraft.cn:8081/repository/releases")
+            //url = uri("http://sacredcraft.cn:8081/repository/releases")
             url = uri("https://repo1.maven.org/maven2")
             isAllowInsecureProtocol = true
             credentials {
@@ -68,7 +68,7 @@ publishing {
          //   url = uri("https://repo1.maven.org/maven2")
         //    }
         }
-    }
+    
     publications {
         // API 发布配置
         create<MavenPublication>("api") {
