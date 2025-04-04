@@ -52,6 +52,22 @@ tasks {
 publishing {
     repositories {
         mavenLocal()
+maven {
+        name = "Aliyun"
+        url = 'https://maven.aliyun.com/repository/public'
+    }
+    
+    // 阿里云Spring仓库
+    maven {
+        name = "Aliyun-Spring"
+        url = 'https://maven.aliyun.com/repository/spring'
+    }
+    
+    // 阿里云Google仓库
+    maven {
+        name = "Aliyun-Google"
+        url = 'https://maven.aliyun.com/repository/google'
+    }
         maven {
             //url = uri("http://sacredcraft.cn:8081/repository/releases")
             url = uri("https://repo.spongepowered.org/maven")
