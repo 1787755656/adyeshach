@@ -54,11 +54,11 @@ jobs:
           echo "子模块构建产物："
           find . -path "*/build/libs/*.jar" -exec ls -l {} \;
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: Plugin
-          path: build/libs/*.jar
+      #- name: Upload artifact
+      #  uses: actions/upload-artifact@v2
+       # with:
+        #  name: Plugin
+         # path: build/libs/*.jar
         
       - name: Upload to release
         if: github.event_name == 'release'
