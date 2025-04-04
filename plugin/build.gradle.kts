@@ -52,20 +52,21 @@ tasks {
 publishing {
     repositories {
         mavenLocal()
-    //    maven {
-          //  url = uri("http://sacredcraft.cn:8081/repository/releases")
-        //    isAllowInsecureProtocol = true
-        //    credentials {
-         //       username = project.findProperty("taboolibUsername").toString()
-         //       password = project.findProperty("taboolibPassword").toString()
-        //    }
-         //   authentication {
-        //        create<BasicAuthentication>("basic")
-        //    }
-      //  }
         maven {
-            url = uri("https://repo1.maven.org/maven2/")
+           // url = uri("http://sacredcraft.cn:8081/repository/releases")
+            url = uri("https://repo1.maven.org/maven2")
+            isAllowInsecureProtocol = true
+            credentials {
+                username = project.findProperty("taboolibUsername").toString()
+                password = project.findProperty("taboolibPassword").toString()
             }
+            authentication {
+               create<BasicAuthentication>("basic")
+            }
+        }
+       // maven {
+         //   url = uri("https://repo1.maven.org/maven2")
+        //    }
         }
     }
     publications {
