@@ -54,10 +54,21 @@ jobs:
           echo "子模块构建产物："
           find . -path "*/build/libs/*.jar" -exec ls -l {} \;
 
-        # output jar
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v2
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
         with:
-          name: adyeshach Release
+          name: Plugin
+          path: build/libs/*.jar
+        
+      - name: Upload to release
+        if: github.event_name == 'release'
+        uses: softprops/action-gh-release@v1
+        with:
+         files: build/libs/*.jar
+        # output jar
+   #   - name: Upload Artifacts
+    #    uses: actions/upload-pages-artifact@v2
+      #  with:
+       #   name: adyeshach Release
           #path: build/libs/*.jar
-          path: "**/build/libs/*.jar"
+         # path: "**/build/libs/*.jar"
