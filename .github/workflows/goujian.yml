@@ -59,10 +59,10 @@ jobs:
          # path: build/libs/*.jar
         
       - name: Upload to release
-        if: github.event_name == 'release'
+        #if: github.event_name == 'release'
         uses: softprops/action-gh-release@v1
         with:
-         files: build/libs/*.jar
+         files: ./plugin/build/libs/*.jar
         # output jar
    #   - name: Upload Artifacts
     #    uses: actions/upload-pages-artifact@v2
