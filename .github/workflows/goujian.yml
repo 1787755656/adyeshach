@@ -31,7 +31,7 @@ jobs:
       # First build
       - name: build
         id: build_1
-        run: ./gradlew clean build
+        run: ./gradlew build
       # Second build
       - name: build (retry 1)
         id: build_2
