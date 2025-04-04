@@ -52,11 +52,11 @@ jobs:
           echo "根项目构建产物："
           find . -name "*.jar"
 
-      #- name: Upload artifact
-      #  uses: actions/upload-artifact@v2
-       # with:
-        #  name: Plugin
-         # path: build/libs/*.jar
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: Plugin
+          path: ./plugin/build/libs/*.jar
         
     #  - name: Upload to release
         #if: github.event_name == 'release'
@@ -64,9 +64,9 @@ jobs:
     #    with:
        #  files: ./plugin/build/libs/*.jar
         # output jar
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v2
-        with:
-          name: adyeshach Release
-          path: ./plugin/build/libs/*.jar
+     # - name: Upload Artifacts
+       # uses: actions/upload-pages-artifact@v2
+      #  with:
+       #   name: adyeshach Release
+        #  path: ./plugin/build/libs/*.jar
           #path: "./plugin/build/libs/*.jar"
